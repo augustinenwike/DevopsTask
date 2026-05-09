@@ -30,7 +30,7 @@ In order to complete this project, I needed an AWS account and a virtual server 
 
 ## 📁 Launch Configuration Reference
 
-![EC2 Launch Instance](images/step01.png)
+![EC2 Launch Instance](images/step0.png)
 
 - **AMI:** Ubuntu Server 26.04 LTS (HVM), SSD Volume Type
 - **Instance Type:** t3.micro (Free Tier eligible)
@@ -46,7 +46,7 @@ ssh -i Downloads/udo-task.pem ubuntu@13.217.106.158
 
 Successfully connected and logged into the EC2 instance running Ubuntu 26.04 LTS with private IP `172.31.34.67`
 
-![Connect to EC2 instance](images/step0.png)
+![Connect to EC2 instance](images/step01.png)
 
 ![SSH into EC2 instance](images/step02.png)
 
