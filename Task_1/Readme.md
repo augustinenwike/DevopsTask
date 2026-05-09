@@ -214,7 +214,7 @@ echo 'Hello LAMP from hostname' $(curl -s http://169.254.169.254/latest/meta-dat
 
 **Result in browser:** Virtual host confirmed working ✅
 
-![Hello LAMP browser result](images/step41.png)
+![Hello LAMP browser result](images/step5.png)
 
 ---
 
@@ -255,7 +255,7 @@ phpinfo();
 
 **Result in browser:** PHP 8.5.4 info page displayed successfully ✅
 
-![PHP info page in browser](images/step5.png)
+![PHP info page in browser](images/step41.png)
 
 > ⚠️ After confirming PHP works, remove the `index.php` file as it contains sensitive server information:
 > ```bash
