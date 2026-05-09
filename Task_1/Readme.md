@@ -1,9 +1,7 @@
 # MY LAMP STACK IMPLEMENTATION ON AWS
 ### Linux | Apache | MySQL | PHP
 
----
-
-## 🏆 What I Gained From This Project
+## What I Gained From This Project
 
 After completing this project, I:
 
@@ -14,7 +12,7 @@ After completing this project, I:
 
 ---
 
-## 📋 Project Overview
+## Project Overview
 
 This document details the provisioning of a **LAMP stack** (Linux, Apache, MySQL, PHP) on an **AWS EC2** instance. The setup was executed as part of an environment configuration exercise. Screenshots below serve as deployment artifacts, presented in the exact order they were captured during stack initialization.
 
@@ -28,7 +26,7 @@ In order to complete this project, I needed an AWS account and a virtual server 
 
 - Launched a new EC2 instance — **Ubuntu Server 26.04 LTS, t3.micro, Free Tier eligible**
 
-## 📁 Launch Configuration Reference
+## Launch Configuration Reference
 
 ![EC2 Launch Instance](images/step0.png)
 
@@ -69,7 +67,7 @@ sudo apt install apache2
 sudo systemctl status apache2
 ```
 
-**Result:** Apache is active and running ✅
+**Result:** Apache is active and running
 
 ![apt update](images/step1.png)
 
@@ -108,7 +106,7 @@ Logged into the MySQL console:
 sudo mysql
 ```
 
-**Server version confirmed:** MySQL 8.4.8-0ubuntu1 ✅
+**Server version confirmed:** MySQL 8.4.8-0ubuntu1
 
 ![MySQL console login](images/step21.png)
 
@@ -161,7 +159,7 @@ php -v
 ```
 ![PHP Version](images/step31.png)
 
-**Result:** PHP 8.5.4 installed successfully ✅
+**Result:** PHP 8.5.4 installed successfully
 
 ---
 
@@ -198,7 +196,7 @@ Enabled the new site and disabled the Apache default site:
 ```bash
 sudo a2ensite projectlamp
 sudo a2dissite 000-default
-sudo apache2ctl configtest      # Syntax OK ✅
+sudo apache2ctl configtest
 sudo systemctl reload apache2
 ```
 
@@ -212,7 +210,7 @@ echo 'Hello LAMP from hostname' $(curl -s http://169.254.169.254/latest/meta-dat
 > /var/www/projectlamp/index.html
 ```
 
-**Result in browser:** Virtual host confirmed working ✅
+**Result in browser:** Virtual host confirmed working
 
 ![Hello LAMP browser result](images/step41.png)
 
@@ -253,7 +251,7 @@ vim /var/www/projectlamp/index.php
 phpinfo();
 ```
 
-**Result in browser:** PHP 8.5.4 info page displayed successfully ✅
+**Result in browser:** PHP 8.5.4 info page displayed successfully
 
 ![PHP info page in browser](images/step5.png)
 
@@ -264,7 +262,7 @@ phpinfo();
 
 ---
 
-## ✅ Final Result — LAMP Stack Fully Operational
+## Final Result — LAMP Stack Fully Operational
 
 | Component | Technology | Version |
 |-----------|-----------|---------|
@@ -273,6 +271,4 @@ phpinfo();
 | **M** — MySQL | MySQL Community Server | 8.4.8 |
 | **P** — PHP | PHP | 8.5.4 |
 
-**My LAMP stack is completely installed and fully operational on AWS EC2.** 🚀
-
----
+**My LAMP stack is completely installed and fully operational on AWS EC2.** 
