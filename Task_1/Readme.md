@@ -42,6 +42,11 @@ In order to complete this project, I needed an AWS account and a virtual server 
 ssh -i Downloads/udo-task.pem ubuntu@13.217.106.158
 ```
 
+```bash
+# Moved to root directory
+sudo -i
+```
+
 Successfully connected and logged into the EC2 instance running Ubuntu 26.04 LTS with private IP `172.31.34.67`
 
 ![Connect to EC2 instance](images/step01.png)
@@ -58,13 +63,13 @@ Installed Apache using Ubuntu's package manager `apt`:
 
 ```bash
 # Update package list
-sudo apt update
+apt update
 
 # Install Apache
-sudo apt install apache2
+apt install apache2
 
 # Verify Apache is running
-sudo systemctl status apache2
+systemctl status apache2
 ```
 
 **Result:** Apache is active and running
@@ -93,7 +98,7 @@ Accessing via public IP in the browser confirmed Apache was live — the **Ubunt
 Installed MySQL using `apt`:
 
 ```bash
-sudo apt install mysql-server
+apt install mysql-server
 ```
 
 When prompted, confirmed installation by typing `Y`.
@@ -103,7 +108,7 @@ When prompted, confirmed installation by typing `Y`.
 Logged into the MySQL console:
 
 ```bash
-sudo mysql
+mysql
 ```
 
 **Server version confirmed:** MySQL 8.4.8-0ubuntu1
@@ -147,7 +152,7 @@ mysql -p
 Installed PHP along with required modules for Apache and MySQL:
 
 ```bash
-sudo apt install php libapache2-mod-php php-mysql
+apt install php libapache2-mod-php php-mysql
 ```
 
 ![PHP installation](images/step3.png)
@@ -168,14 +173,14 @@ php -v
 Created a project directory and set correct ownership:
 
 ```bash
-sudo mkdir /var/www/projectlamp
-sudo chown -R $USER:$USER /var/www/projectlamp
+mkdir /var/www/projectlamp
+chown -R $USER:$USER /var/www/projectlamp
 ```
 
 Created a new Apache virtual host configuration file:
 
 ```bash
-sudo vi /etc/apache2/sites-available/projectlamp.conf
+vi /etc/apache2/sites-available/projectlamp.conf
 ```
 
 Added the following configuration:
@@ -194,10 +199,10 @@ Added the following configuration:
 Enabled the new site and disabled the Apache default site:
 
 ```bash
-sudo a2ensite projectlamp
-sudo a2dissite 000-default
-sudo apache2ctl configtest
-sudo systemctl reload apache2
+a2ensite projectlamp
+a2dissite 000-default
+apache2ctl configtest
+systemctl reload apache2
 ```
 
 ![Virtual host setup - a2ensite, a2dissite, configtest](images/step4.png)
@@ -221,7 +226,7 @@ echo 'Hello LAMP from hostname' $(curl -s http://169.254.169.254/latest/meta-dat
 By default, Apache serves `index.html` before `index.php`. To change this behavior, edited the `dir.conf` file:
 
 ```bash
-sudo vim /etc/apache2/mods-enabled/dir.conf
+vim /etc/apache2/mods-enabled/dir.conf
 ```
 
 Changed the `DirectoryIndex` directive from:
@@ -237,7 +242,7 @@ DirectoryIndex index.php index.html index.cgi index.pl index.xhtml index.htm
 Reloaded Apache to apply the change:
 
 ```bash
-sudo systemctl reload apache2
+systemctl reload apache2
 ```
 
 Created a PHP test script to validate that PHP is correctly installed and configured:
@@ -257,7 +262,7 @@ phpinfo();
 
 > ⚠️ After confirming PHP works, remove the `index.php` file as it contains sensitive server information:
 > ```bash
-> sudo rm /var/www/projectlamp/index.php
+> rm /var/www/projectlamp/index.php
 > ```
 
 ---
