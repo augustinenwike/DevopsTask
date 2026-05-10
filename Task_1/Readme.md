@@ -79,7 +79,7 @@ Before receiving any traffic, TCP port **80** was opened in the EC2 security gro
 
 To verify Apache locally:
 ```bash
-curl http://localhost:80
+http://13.217.106.158:80
 ```
 
 Accessing via public IP in the browser confirmed Apache was live — the **Ubuntu Apache2 Default Page** loaded successfully.
