@@ -3,7 +3,7 @@
 
 ---
 
-## 🏆 What I Gained From This Project
+## What I Gained From This Project
 
 After completing this project, I:
 
@@ -15,7 +15,7 @@ After completing this project, I:
 
 ---
 
-## 📋 Project Overview
+## Project Overview
 
 This document details the provisioning of a **LEMP stack** (Linux, Nginx, MySQL, PHP) on an **AWS EC2** instance. Screenshots are presented in the exact order they were captured during deployment.
 
