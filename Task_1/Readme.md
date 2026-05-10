@@ -38,6 +38,8 @@ In order to complete this project, I needed an AWS account and a virtual server 
 
 - Connected to the instance via SSH using a `.pem` key pair
 
+![Connect to EC2 instance](images/step01.png)
+
 ```bash
 ssh -i Downloads/udo-task.pem ubuntu@13.217.106.158
 ```
@@ -47,9 +49,7 @@ ssh -i Downloads/udo-task.pem ubuntu@13.217.106.158
 sudo -i
 ```
 
-Successfully connected and logged into the EC2 instance running Ubuntu 26.04 LTS with private IP `172.31.34.67`
-
-![Connect to EC2 instance](images/step01.png)
+Successfully connected and logged into the EC2 instance running Ubuntu 26.04 LTS with public IP `13.217.106.158`
 
 ![SSH into EC2 instance](images/step02.png)
 
