@@ -257,8 +257,6 @@ mkdir models && cd models
 vi book.js
 ```
 
-![mkdir models and vi book.js](images/step5-mkdir-models.png)
-
 ```javascript
 var mongoose = require('mongoose');
 var dbHost = 'mongodb://localhost:27017/test';
@@ -288,8 +286,6 @@ cd ~/Books
 mkdir public && cd public
 vi script.js
 ```
-
-![mkdir public and vi script.js](images/step6-mkdir-public.png)
 
 Added the AngularJS controller to handle GET, POST, and DELETE operations against the API:
 
@@ -438,33 +434,3 @@ Added three books via the form:
 | **N** — Node.js | Node.js Runtime | 20.20.2 |
 
 **My MEAN stack is completely installed, fully operational, and serving a live Book Register application on AWS EC2.**
-
-| Image File | Description |
-|------------|-------------|
-| `step0-launch.png` | EC2 Launch Instance page |
-| `step0-running.png` | EC2 Instance running in console |
-| `step0-ssh-login.png` | Terminal SSH login |
-| `step0-sudo.png` | sudo -i root switch |
-| `step1-apt-update.png` | apt update output |
-| `step1-apt-upgrade.png` | apt upgrade output |
-| `step1-prerequisites.png` | curl dirmngr etc install |
-| `step1-nodesource.png` | NodeSource setup_20.x script |
-| `step1-nodejs-install.png` | apt install nodejs |
-| `step2-mongo-repo.png` | MongoDB GPG key and repo setup |
-| `step2-mongo-install.png` | apt install mongodb-org |
-| `step2-mongo-status.png` | systemctl status mongod |
-| `step3-body-parser.png` | npm install body-parser |
-| `step3-npm-init.png` | npm init in Books directory |
-| `step4-server-js.png` | server.js in vim |
-| `step4-npm-install.png` | npm install express mongoose |
-| `step5-mkdir-apps.png` | mkdir apps and vi routes.js |
-| `step5-routes-js.png` | Final async/await routes.js |
-| `step5-mkdir-models.png` | mkdir models and vi book.js |
-| `step5-book-js.png` | Mongoose book model in vim |
-| `step6-mkdir-public.png` | mkdir public and vi script.js |
-| `step6-script-js.png` | AngularJS script.js in vim |
-| `step6-index-html.png` | index.html in vim |
-| `step7-server-running.png` | node server.js output |
-| `step7-curl.png` | curl localhost:3300 output |
-| `step7-browser-empty.png` | Browser - empty Book Register |
-| `step7-browser-books.png` | Browser - 3 books added |
