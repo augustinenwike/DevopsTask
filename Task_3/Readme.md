@@ -300,10 +300,8 @@ vim .env
 ```
 
 ```
-DB=mongodb+srv://udo:038August@nodetuts.ycajm63.mongodb.net/MERN?appName=MERN
+DB=mongodb+srv://udo:****@nodetuts.ycajm63.mongodb.net/MERN?appName=MERN
 ```
-
-![.env MongoDB connection string](images/step7-env.png)
 
 Updated `index.js` with the full production-ready configuration — including MongoDB connection, body-parser, route mounting, and error handling:
 
