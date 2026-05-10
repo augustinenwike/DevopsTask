@@ -194,7 +194,7 @@ nano /etc/nginx/sites-available/projectLEMP
 
 Initial config (before PHP socket fix):
 
-![Nginx config nano](images/step4-nginx-config-nano.png)
+![Nginx config nano](images/step4-nginx-config.png)
 
 Symlinked to sites-enabled to activate it:
 
